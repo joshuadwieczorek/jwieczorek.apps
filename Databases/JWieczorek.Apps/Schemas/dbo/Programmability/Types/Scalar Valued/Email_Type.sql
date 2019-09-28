@@ -1,0 +1,2 @@
+﻿CREATE TYPE [dbo].[Email_Type]
+	FROM VARCHAR(250);

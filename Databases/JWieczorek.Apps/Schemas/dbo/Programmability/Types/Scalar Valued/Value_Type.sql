@@ -1,0 +1,2 @@
+﻿CREATE TYPE [dbo].[Value_Type]
+	FROM VARCHAR(MAX);

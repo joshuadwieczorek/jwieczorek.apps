@@ -1,0 +1,2 @@
+﻿CREATE TYPE [dbo].[Type_ID_Type]
+	FROM SMALLINT;

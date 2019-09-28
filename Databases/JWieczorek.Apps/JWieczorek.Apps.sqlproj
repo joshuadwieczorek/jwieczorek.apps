@@ -80,5 +80,36 @@
     <Folder Include="Schemas\dbo\Programmability\Types\Scalar Valued" />
     <Folder Include="Schemas\dbo\Programmability\Stored Procedures" />
     <Folder Include="Schemas\dbo\Tables" />
+    <Folder Include="Schemas\geo" />
+    <Folder Include="Schemas\geo\Programmability" />
+    <Folder Include="Schemas\geo\Programmability\Functions" />
+    <Folder Include="Schemas\geo\Programmability\Functions\Scalar Valued" />
+    <Folder Include="Schemas\geo\Programmability\Functions\Table Valued" />
+    <Folder Include="Schemas\geo\Programmability\Stored Procedures" />
+    <Folder Include="Schemas\geo\Programmability\Types" />
+    <Folder Include="Schemas\geo\Programmability\Types\Scalar Valued" />
+    <Folder Include="Schemas\geo\Programmability\Types\Table Valued" />
+    <Folder Include="Schemas\geo\Tables" />
+    <Folder Include="Schemas\geo\Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schemas\users\Tables\Users.sql" />
+    <Build Include="Schemas\users\Tables\Meta_Keys.sql" />
+    <Build Include="Schemas\users\users.sql" />
+    <Build Include="Schemas\users\Tables\Meta_Values.sql" />
+    <Build Include="Schemas\users\Tables\Passwords.sql" />
+    <Build Include="Schemas\users\Tables\Email_Addresses.sql" />
+    <Build Include="Schemas\users\Tables\Addresses.sql" />
+    <Build Include="Schemas\users\Tables\Phone_Numbers.sql" />
+    <Build Include="Schemas\dbo\Programmability\Types\Scalar Valued\UUID_Type.sql" />
+    <Build Include="Schemas\dbo\Programmability\Types\Scalar Valued\DateTime_Type.sql" />
+    <Build Include="Schemas\dbo\Programmability\Functions\Scalar Valued\fnDateTimeToUTC.sql" />
+    <Build Include="Schemas\dbo\Programmability\Types\Scalar Valued\Name_Type.sql" />
+    <Build Include="Schemas\dbo\Programmability\Types\Scalar Valued\Type_ID_Type.sql" />
+    <Build Include="Schemas\dbo\Programmability\Types\Scalar Valued\Email_Type.sql" />
+    <Build Include="Schemas\geo\Tables\Countries.sql" />
+    <Build Include="Schemas\geo\Tables\States.sql" />
+    <Build Include="Schemas\geo\geo.sql" />
+    <Build Include="Schemas\dbo\Programmability\Types\Scalar Valued\Value_Type.sql" />
   </ItemGroup>
 </Project>
