@@ -56,5 +56,29 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Schemas" />
+    <Folder Include="Scripts" />
+    <Folder Include="Schemas\users" />
+    <Folder Include="Schemas\dbo" />
+    <Folder Include="Schemas\users\Tables" />
+    <Folder Include="Schemas\users\Programmability" />
+    <Folder Include="Schemas\users\Programmability\Stored Procedures" />
+    <Folder Include="Schemas\users\Programmability\Functions" />
+    <Folder Include="Schemas\users\Programmability\Functions\Scalar Valued" />
+    <Folder Include="Schemas\users\Programmability\Functions\Table Valued" />
+    <Folder Include="Schemas\users\Programmability\Types" />
+    <Folder Include="Schemas\users\Programmability\Types\Scalar Valued" />
+    <Folder Include="Schemas\users\Programmability\Types\Table Valued" />
+    <Folder Include="Schemas\users\Views" />
+    <Folder Include="Schemas\dbo\Views" />
+    <Folder Include="Schemas\dbo\Programmability" />
+    <Folder Include="Schemas\dbo\Programmability\Functions" />
+    <Folder Include="Schemas\dbo\Programmability\Functions\Table Valued" />
+    <Folder Include="Schemas\dbo\Programmability\Functions\Scalar Valued" />
+    <Folder Include="Schemas\dbo\Programmability\Types" />
+    <Folder Include="Schemas\dbo\Programmability\Types\Table Valued" />
+    <Folder Include="Schemas\dbo\Programmability\Types\Scalar Valued" />
+    <Folder Include="Schemas\dbo\Programmability\Stored Procedures" />
+    <Folder Include="Schemas\dbo\Tables" />
   </ItemGroup>
 </Project>
