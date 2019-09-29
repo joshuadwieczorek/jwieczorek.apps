@@ -15,4 +15,6 @@
 	,	CONSTRAINT [FK_Users_Phone_Numbers_User_ID] FOREIGN KEY ([User_ID]) REFERENCES [users].[Users]([ID])
 	,	CONSTRAINT [FK_Users_Phone_Numbers_Created_By] FOREIGN KEY ([Created_By]) REFERENCES [users].[Users]([ID])
 	,	CONSTRAINT [FK_Users_Phone_Numbers_Updated_By] FOREIGN KEY ([Updated_By]) REFERENCES [users].[Users]([ID])
+	,	CONSTRAINT [CK_Users_Phone_Numbers_Status_Type] CHECK ([dbo].[fnTypeValueExits]('users', 'status_type', [Status_Type]) = 1)
+	,	CONSTRAINT [CK_Users_Phone_Numbers_Phone_Type] CHECK ([dbo].[fnTypeValueExits]('users', 'phone_type', [Status_Type]) = 1)
 );

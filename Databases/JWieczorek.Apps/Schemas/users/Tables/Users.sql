@@ -11,4 +11,5 @@
 	,	[Time_Updated]	[dbo].[DateTime_Type]	NOT NULL	DEFAULT [dbo].[fnDateTimeToUTC](GETDATE())
 	,	CONSTRAINT [PK_Users_Users_ID] PRIMARY KEY ([ID])
 	,	CONSTRAINT [AK_Users_Users_Username] UNIQUE ([Username])
+	,	CONSTRAINT [CK_Users_Users_Status_Type] CHECK ([dbo].[fnTypeValueExits]('users', 'status_type', [Status_Type]) = 1)
 );

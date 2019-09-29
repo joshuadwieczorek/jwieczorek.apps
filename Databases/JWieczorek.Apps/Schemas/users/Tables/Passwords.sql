@@ -13,4 +13,5 @@
 	,	CONSTRAINT [FK_Users_Passwords_User_ID] FOREIGN KEY ([User_ID]) REFERENCES [users].[Users]([ID])
 	,	CONSTRAINT [FK_Users_Passwords_Created_By] FOREIGN KEY ([Created_By]) REFERENCES [users].[Users]([ID])
 	,	CONSTRAINT [FK_Users_Passwords_Updated_By] FOREIGN KEY ([Updated_By]) REFERENCES [users].[Users]([ID])
+	,	CONSTRAINT [CK_Users_Passwords_Status_Type] CHECK ([dbo].[fnTypeValueExits]('users', 'status_type', [Status_Type]) = 1)
 );

@@ -14,4 +14,6 @@
 	,	CONSTRAINT [FK_Users_Email_Addresses_Created_By] FOREIGN KEY ([Created_By]) REFERENCES [users].[Users]([ID])
 	,	CONSTRAINT [FK_Users_Email_Addresses_Updated_By] FOREIGN KEY ([Updated_By]) REFERENCES [users].[Users]([ID])
 	,	CONSTRAINT [AK_Users_Email_Addresses_Email_Address] UNIQUE ([Email_Address])
+	,	CONSTRAINT [CK_Users_Email_Addresses_Status_Type] CHECK ([dbo].[fnTypeValueExits]('users', 'status_type', [Status_Type]) = 1)
+	,	CONSTRAINT [CK_Users_Email_Addresses_Email_Type] CHECK ([dbo].[fnTypeValueExits]('users', 'email_type', [Email_Type]) = 1)
 );

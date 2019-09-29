@@ -12,6 +12,7 @@
 	,	[Country_ID]	[dbo].[UUID_Type]		NULL
 	,	[Primary]		BIT						NOT NULL	DEFAULT 0
 	,	[Address_Type]	[dbo].[Type_ID_Type]	NOT NULL	DEFAULT 0	
+	,	[Status_Type]	[dbo].[Type_ID_Type]	NOT NULL	DEFAULT 0	
 	,	[Created_By]	[dbo].[UUID_Type]		NULL
 	,	[Updated_By]	[dbo].[UUID_Type]		NULL
 	,	[Time_Created]	[dbo].[DateTime_Type]	NOT NULL	DEFAULT [dbo].[fnDateTimeToUTC](GETDATE())
@@ -22,4 +23,6 @@
 	,	CONSTRAINT [FK_Users_Addresses_Updated_By] FOREIGN KEY ([Updated_By]) REFERENCES [users].[Users]([ID])
 	,	CONSTRAINT [FK_Users_Addresses_State_ID] FOREIGN KEY ([State_ID]) REFERENCES [geo].[Countries]([ID])
 	,	CONSTRAINT [FK_Users_Addresses_Country_ID] FOREIGN KEY ([Country_ID]) REFERENCES [geo].[Countries]([ID])
+	,	CONSTRAINT [CK_Users_Addresses_Status_Type] CHECK ([dbo].[fnTypeValueExits]('users', 'status_type', [Status_Type]) = 1)
+	,	CONSTRAINT [CK_Users_Addresses_Address_Type] CHECK ([dbo].[fnTypeValueExits]('users', 'email_type', [Address_Type]) = 1)
 );
