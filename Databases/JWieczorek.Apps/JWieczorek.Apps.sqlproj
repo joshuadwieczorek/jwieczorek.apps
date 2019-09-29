@@ -111,5 +111,10 @@
     <Build Include="Schemas\geo\Tables\States.sql" />
     <Build Include="Schemas\geo\geo.sql" />
     <Build Include="Schemas\dbo\Programmability\Types\Scalar Valued\Value_Type.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Users_Create.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Users_Email_Addresses_Create.sql" />
+    <Build Include="Schemas\dbo\Tables\Types_Keys.sql" />
+    <Build Include="Schemas\dbo\Tables\Types_Values.sql" />
+    <Build Include="Schemas\dbo\Views\vwTypes.sql" />
   </ItemGroup>
 </Project>
