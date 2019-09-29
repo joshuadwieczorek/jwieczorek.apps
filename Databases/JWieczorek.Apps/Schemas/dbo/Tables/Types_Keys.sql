@@ -3,7 +3,7 @@
 		[ID]			[dbo].[UUID_Type]		NOT NULL	DEFAULT NEWID()
 	,	[Schema_Name]	[dbo].[Name_Type]		NOT NULL
 	,	[Name]			[dbo].[Name_Type]		NOT NULL
-	,	[Description]	VARCHAR(1000)			NULL
+	,	[Description]	[dbo].[Description_Type] NULL
 	,	[Created_By]	[dbo].[UUID_Type]		NULL
 	,	[Updated_By]	[dbo].[UUID_Type]		NULL
 	,	[Time_Created]	[dbo].[DateTime_Type]	NOT NULL	DEFAULT [dbo].[fnDateTimeToUTC](GETDATE())

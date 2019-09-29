@@ -116,5 +116,11 @@
     <Build Include="Schemas\dbo\Tables\Types_Keys.sql" />
     <Build Include="Schemas\dbo\Tables\Types_Values.sql" />
     <Build Include="Schemas\dbo\Views\vwTypes.sql" />
+    <Build Include="Schemas\dbo\Programmability\Functions\Scalar Valued\fnTypeValueExits.sql" />
+    <Build Include="Schemas\dbo\Programmability\Stored Procedures\Types_Create.sql" />
+    <Build Include="Schemas\dbo\Programmability\Types\Scalar Valued\Description_Type.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\1.0.0.PostDeployment.sql" />
   </ItemGroup>
 </Project>

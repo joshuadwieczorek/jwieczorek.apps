@@ -12,7 +12,25 @@ BEGIN
 
 	INSERT INTO [users].[Email_Addresses]
 	(
-			s
+			[User_ID]		
+		,	[Email_Address]	
+		,	[Email_Type]	
+		,	[Status_Type]		
+		,	[Created_By]	
+		,	[Updated_By]	
+		,	[Time_Created]	
+		,	[Time_Updated]	
 	)
+	VALUES
+	(
+			@UserID
+		,	@EmailAddres
+		,	1
+		,	1
+		,	@UserID
+		,	@UserID
+		,	@DateTime
+		,	@DateTime
+	);
 
 END
