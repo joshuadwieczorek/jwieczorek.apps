@@ -6,13 +6,28 @@ using JWieczorek.Libraries.WebServices.Database.Layers.users.Users;
 
 namespace JWieczorek.Libraries.WebServices.Identities
 {
-    public class UserIdentityHandler
+    public class UserIdentityHandler : IUserIdentityHandler
     {
+        /// <summary>
+        /// Crypto provider.
+        /// </summary>
         CryptographyProvider Cryptography { get; set; }
 
+        /// <summary>
+        /// User database provider.
+        /// </summary>
         IUsersDataProvider UsersDataProvider { get; set; }
+
+        /// <summary>
+        /// Application identity name.
+        /// </summary>
         String ApplicationIdentityName { get; set; }
 
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="usersDataProvider"></param>
         public UserIdentityHandler(IUsersDataProvider usersDataProvider)
         {
             Cryptography = new CryptographyProvider();
@@ -130,7 +145,5 @@ namespace JWieczorek.Libraries.WebServices.Identities
             else
                 throw new IdentityNotFoundException("User not found!", username);
         }
-
-
     }
 }
