@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{db786872-2893-4a50-99ef-7f6a867d1f58}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -112,13 +112,50 @@
     <Build Include="Schemas\geo\geo.sql" />
     <Build Include="Schemas\dbo\Programmability\Types\Scalar Valued\Value_Type.sql" />
     <Build Include="Schemas\users\Programmability\Stored Procedures\Users_Create.sql" />
-    <Build Include="Schemas\users\Programmability\Stored Procedures\Users_Email_Addresses_Create.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Email_Addresses_Create.sql" />
     <Build Include="Schemas\dbo\Tables\Types_Keys.sql" />
     <Build Include="Schemas\dbo\Tables\Types_Values.sql" />
     <Build Include="Schemas\dbo\Views\vwTypes.sql" />
     <Build Include="Schemas\dbo\Programmability\Functions\Scalar Valued\fnTypeValueExits.sql" />
     <Build Include="Schemas\dbo\Programmability\Stored Procedures\Types_Create.sql" />
     <Build Include="Schemas\dbo\Programmability\Types\Scalar Valued\Description_Type.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Addresses_Create.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Meta_Create.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Phone_Numbers_Create.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Passwords_Create.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Users_Read.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Users_Read_Profile.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Email_Addresses_Read.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Addresses_Read.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Phone_Numbers_Read.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Passwords_Read.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Meta_Read.sql" />
+    <Build Include="Schemas\users\Views\vwMeta_Data.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Email_Addresses_Update.sql" />
+    <Build Include="Schemas\users\Tables\Roles.sql" />
+    <Build Include="Schemas\users\Tables\Permissions.sql" />
+    <Build Include="Schemas\users\Tables\Roles_Map.sql" />
+    <Build Include="Schemas\users\Tables\Permissions_Map.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Roles_Create.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Permissions_Create.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Users_Change_Status.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Addresses_Change_Status.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Email_Addresses_Change_Status.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Phone_Numbers_Change_Status.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Addresses_Update.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Phone_Numbers_Update.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Users_Update.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Permissions_Read.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Roles_Read.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Meta_Keys_Create.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Meta_Keys_Read.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Meta_Update.sql" />
+    <Build Include="Schemas\dbo\Programmability\Types\Table Valued\UUID_Table_Type.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Roles_Sync.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Permissions_Read_User.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Roles_Read_User.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Permissions_Sync.sql" />
+    <Build Include="Schemas\users\Programmability\Stored Procedures\Users_Read_Authorization.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\1.0.0.PostDeployment.sql" />

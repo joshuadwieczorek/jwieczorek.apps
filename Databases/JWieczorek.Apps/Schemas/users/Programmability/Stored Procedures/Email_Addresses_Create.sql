@@ -1,8 +1,10 @@
-﻿CREATE PROCEDURE [users].[Users_Email_Addresses_Create]
+﻿CREATE PROCEDURE [users].[Email_Addresses_Create]
 (
-		@EmailAddres [dbo].[Email_Type]
-	,	@UserID [dbo].[UUID_Type]
+		@UserID [dbo].[UUID_Type]
+	,	@EmailAddres [dbo].[Email_Type]
+	,	@Primary BIT = 0
 	,	@EmailType [dbo].[Type_ID_Type] = 1
+	,	@CreatedBy [dbo].[UUID_Type] = NULL
 	,	@DateTime [dbo].[DateTime_Type] = NULL
 )
 AS
@@ -10,10 +12,14 @@ BEGIN
 
 	SELECT @DateTime = [dbo].[fnDateTimeToUTC](@DateTime);
 
+	DECLARE @EmailID [dbo].[UUID_Type] = NEWID();
+
 	INSERT INTO [users].[Email_Addresses]
 	(
-			[User_ID]		
+			[ID]
+		,	[User_ID]		
 		,	[Email_Address]	
+		,	[Is_Primary]
 		,	[Email_Type]	
 		,	[Status_Type]		
 		,	[Created_By]	
@@ -23,14 +29,18 @@ BEGIN
 	)
 	VALUES
 	(
-			@UserID
+			@EmailID
+		,	@UserID
 		,	@EmailAddres
+		,	@Primary
 		,	1
 		,	1
-		,	@UserID
-		,	@UserID
+		,	@CreatedBy
+		,	@CreatedBy
 		,	@DateTime
 		,	@DateTime
 	);
+
+	EXEC [users].[Email_Addresses_Read] @EmailID;
 
 END

@@ -13,9 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "JWieczorek.Apps", "Databases\JWieczorek.Apps\JWieczorek.Apps.sqlproj", "{DB786872-2893-4A50-99EF-7F6A867D1F58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWieczorek.WebServices.Users", "Applications\WebServices\JWieczorek.WebServices.Users\JWieczorek.WebServices.Users.csproj", "{C8E13432-FE04-4E3F-8B87-D16DB643A733}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWieczorek.WebServices.Users", "Applications\WebServices\JWieczorek.WebServices.Users\JWieczorek.WebServices.Users.csproj", "{C8E13432-FE04-4E3F-8B87-D16DB643A733}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWieczorek.Libraries.WebServices", "Libraries\JWieczorek.Libraries.WebServices\JWieczorek.Libraries.WebServices.csproj", "{B16F4EFB-F921-49C9-80CD-60B2C2A92EC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWieczorek.Libraries.WebServices", "Libraries\JWieczorek.Libraries.WebServices\JWieczorek.Libraries.WebServices.csproj", "{B16F4EFB-F921-49C9-80CD-60B2C2A92EC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{619F5576-CAD8-4FE6-8702-A729EE2F28E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTester", "Applications\Console\AppTester\AppTester.csproj", "{016E18E3-A074-42EE-B7FB-71A105F34EBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{7AC28729-F699-4F91-887D-F5F1BA2DEAD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWieczorek.WebApp", "Applications\Web\JWieczorek.WebApp\JWieczorek.WebApp.csproj", "{28CBE4E6-FB22-44AF-80F9-62E9A5555AF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +45,14 @@ Global
 		{B16F4EFB-F921-49C9-80CD-60B2C2A92EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B16F4EFB-F921-49C9-80CD-60B2C2A92EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B16F4EFB-F921-49C9-80CD-60B2C2A92EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{016E18E3-A074-42EE-B7FB-71A105F34EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{016E18E3-A074-42EE-B7FB-71A105F34EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{016E18E3-A074-42EE-B7FB-71A105F34EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{016E18E3-A074-42EE-B7FB-71A105F34EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28CBE4E6-FB22-44AF-80F9-62E9A5555AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28CBE4E6-FB22-44AF-80F9-62E9A5555AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28CBE4E6-FB22-44AF-80F9-62E9A5555AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28CBE4E6-FB22-44AF-80F9-62E9A5555AF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +62,10 @@ Global
 		{DB786872-2893-4A50-99EF-7F6A867D1F58} = {CF66AE27-930D-470E-8A8D-C792FDAF4D6C}
 		{C8E13432-FE04-4E3F-8B87-D16DB643A733} = {281350FA-7125-4E06-BE7C-B1AD8EA95D50}
 		{B16F4EFB-F921-49C9-80CD-60B2C2A92EC0} = {2837F153-A905-40BA-94B0-E8597072B1BD}
+		{619F5576-CAD8-4FE6-8702-A729EE2F28E2} = {2414A211-27AC-4533-B2C6-B2E39918D9CD}
+		{016E18E3-A074-42EE-B7FB-71A105F34EBB} = {619F5576-CAD8-4FE6-8702-A729EE2F28E2}
+		{7AC28729-F699-4F91-887D-F5F1BA2DEAD8} = {2414A211-27AC-4533-B2C6-B2E39918D9CD}
+		{28CBE4E6-FB22-44AF-80F9-62E9A5555AF8} = {7AC28729-F699-4F91-887D-F5F1BA2DEAD8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7515DAB-EA9A-42EB-B174-1A598E5195BB}

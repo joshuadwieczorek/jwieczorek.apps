@@ -3,7 +3,8 @@
 		@Username [dbo].[Name_Type]
 	,	@FirstName [dbo].[Name_Type]
 	,	@LastName [dbo].[Name_Type]
-	,	@UserID [dbo].[UUID_Type] = NULL
+	,	@StatusType [dbo].[Type_ID_Type]
+	,	@CreatedBy [dbo].[UUID_Type] = NULL
 	,	@DateTime [dbo].[DateTime_Type] = NULL
 )
 AS
@@ -11,11 +12,15 @@ BEGIN
 
 	SELECT @DateTime = [dbo].[fnDateTimeToUTC](@DateTime);
 
+	DECLARE @UserID [dbo].[UUID_Type] = NEWID();
+
 	INSERT INTO [users].[Users]
 	(
-			[Username]		
+			[ID]
+		,	[Username]		
 		,	[First_Name]	
-		,	[Last_Name]			
+		,	[Last_Name]		
+		,	[Status_Type]
 		,	[Created_By]	
 		,	[Updated_By]	
 		,	[Time_Created]	
@@ -23,13 +28,17 @@ BEGIN
 	)
 	VALUES
 	(
-			@Username
+			@UserID
+		,	@Username
 		,	@FirstName
 		,	@LastName
-		,	@UserID
-		,	@UserID
+		,	@StatusType
+		,	@CreatedBy
+		,	@CreatedBy
 		,	@DateTime
 		,	@DateTime
 	);
+
+	EXEC [users].[Users_Read] @UserID;
 
 END
