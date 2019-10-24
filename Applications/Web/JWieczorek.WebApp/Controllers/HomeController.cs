@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using JWieczorek.WebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace JWieczorek.WebApp.Controllers
 {
@@ -18,6 +19,7 @@ namespace JWieczorek.WebApp.Controllers
             _logger = logger;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             return View();

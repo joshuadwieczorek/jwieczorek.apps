@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using JWieczorek.Libraries.WebServices.Database.Layers.users.Users;
+using JWieczorek.Libraries.WebServices.Identities;
 
 namespace JWieczorek.WebApp
 {
@@ -24,6 +26,21 @@ namespace JWieczorek.WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            
+
+            // Add authentication.
+            services.AddAuthentication("JWieczorek.Apps.Auth")
+                .AddCookie("JWieczorek.Apps.Auth", config =>
+                {
+                    config.Cookie.Name = "JWieczorek.Apps.Auth";
+                    config.LoginPath = "/login";
+                });
+
+            // Add services.
+            String connectionString = Configuration.GetConnectionString("Default");
+
+            services.AddSingleton<IUsersDataProvider>(new UsersDataProvider(connectionString));
+            services.AddSingleton<IUserIdentityHandler, UserIdentityHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,11 +56,11 @@ namespace JWieczorek.WebApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
-            app.UseRouting();
-
+            app.UseRouting();            
+            app.UseAuthentication();            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -51,6 +68,8 @@ namespace JWieczorek.WebApp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+               
             });
         }
     }

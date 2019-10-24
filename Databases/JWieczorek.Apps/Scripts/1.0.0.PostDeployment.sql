@@ -60,6 +60,13 @@ CREATE TABLE #UsersTable
 INSERT INTO #UsersTable
 EXEC [users].[Users_Create] 'SysAdmin', 'Systems', 'Administrator', 1;
 
+INSERT INTO #UsersTable
+EXEC [users].[Users_Create] 'useradmin', 'Bob', 'Jones', 1;
+
+INSERT INTO #UsersTable
+EXEC [users].[Users_Create] 'subscriber', 'Tim', 'Allen', 1;
+
+
 DECLARE @UserID [dbo].[UUID_Type]
 	,	@RolesTblVar [dbo].[UUID_Table_Type];
 
